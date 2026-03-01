@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #6bcf9d,#a7e3c2);
+  color: #2f3e46;
+}
+
+/* BACKGROUND BLOBS */
+.blob {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  filter: blur(90px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.blob1 {
+  background: #a7e3c2;
+  top: -120px;
+  left: -120px;
+}
+
+.blob2 {
+  background: #6bcf9d;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.6);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+header.scrolled {
+  background: rgba(255,255,255,0.9);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f3d2e;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #2f3e46;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  opacity: 1;
+  border-bottom: 2px solid #6bcf9d;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 120px 60px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+  background: transparent;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  background: #0b3d2e;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.section.show h2::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  color: white;
+  text-align: center;
+}
+
+.hero h2 {
+  animation: fadeDown 1s ease;
+}
+
+.hero p {
+  animation: fadeUp 1.2s ease;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border: none;
+  background: white;
+  color: #6bcf9d;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HABIT CARDS */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.card.completed {
+  background: #e6f7f1;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* PROGRESS */
+.stats {
+  display: flex;
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.stats div {
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.stats strong {
+  font-size: 28px;
+  color: #6bcf9d;
+  display: block;
+}
+
+.progress-box {
+  max-width: 400px;
+}
+
+.bar {
+  height: 20px;
+  background: #ddd;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  width: 0;
+  height: 100%;
+  background: #6bcf9d;
+  transition: width 1.5s ease;
+}
+
+/* TIPS */
+.tip-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.tip-cards div {
+  background: white;
+  padding: 20px;
+}
+
+/* CONTACT */
+form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #6bcf9d;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #6bcf9d;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+.intro {
+  height: 100vh;
+  padding-top: 80px; /* navbar space */
+}
+.intro-icon {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+.intro h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.intro {
+  height: 100vh;
+  background: #0f3d2e;          /* forest dark green */
+  color: #e9f5db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* vertical center */
+  align-items: center;          /* horizontal center */
+  text-align: center;
+}
+
+
