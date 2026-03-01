@@ -11,7 +11,7 @@ body {
   color: #2f3e46;
 }
 
-/* BACKGROUND BLOBS */
+
 .blob {
   position: fixed;
   width: 300px;
@@ -33,7 +33,7 @@ body {
   right: -120px;
 }
 
-/* NAVBAR */
+
 header {
   position: fixed;
   top: 0;
@@ -76,7 +76,7 @@ nav ul li a:hover {
   border-bottom: 2px solid #6bcf9d;
 }
 
-/* SECTIONS */
+
 .section {
   min-height: 100vh;
   padding: 120px 60px;
@@ -112,7 +112,7 @@ nav ul li a:hover {
   width: 100%;
 }
 
-/* HERO */
+
 .hero {
   color: white;
   text-align: center;
@@ -146,7 +146,7 @@ nav ul li a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* HABIT CARDS */
+
 .cards {
   margin-top: 40px;
   display: grid;
@@ -169,7 +169,7 @@ nav ul li a:hover {
   opacity: 0.7;
 }
 
-/* PROGRESS */
+
 .stats {
   display: flex;
   gap: 25px;
@@ -206,7 +206,7 @@ nav ul li a:hover {
   transition: width 1.5s ease;
 }
 
-/* TIPS */
+
 .tip-cards {
   margin-top: 30px;
   display: grid;
@@ -219,7 +219,7 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-/* CONTACT */
+
 form {
   max-width: 400px;
   margin-top: 20px;
@@ -248,7 +248,6 @@ form button {
   cursor: pointer;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -260,7 +259,7 @@ footer {
 
 .intro {
   height: 100vh;
-  padding-top: 80px; /* navbar space */
+  padding-top: 80px; 
 }
 .intro-icon {
   font-size: 64px;
@@ -280,13 +279,14 @@ footer {
 
 .intro {
   height: 100vh;
-  background: #0f3d2e;          /* forest dark green */
+  background: #0f3d2e;          
   color: #e9f5db;
   display: flex;
   flex-direction: column;
-  justify-content: center;      /* vertical center */
-  align-items: center;          /* horizontal center */
+  justify-content: center;     
+  align-items: center;          
   text-align: center;
 }
+
 
 
