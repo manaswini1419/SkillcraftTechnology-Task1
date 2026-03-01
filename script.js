@@ -3,7 +3,7 @@ const sections = document.querySelectorAll(".section");
 const navLinks = document.querySelectorAll(".nav-link");
 const progressFill = document.querySelector(".fill");
 
-// Scroll effects
+
 window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 50);
 
@@ -30,9 +30,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Habit complete toggle
+
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("completed");
   });
 });
+
